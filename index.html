@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css.css/estil.css">
+
+</head>
+
+<body onload="move()">
+
+
+
+    <div id="pantalla1">
+        <div class="GifLogo"> </div>
+
+        <div id="barraCarga">
+            <div id="myProgress" onload="move()">
+                <div id="myBar"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="pantalla2">
+
+        <div class="GifLogo">
+
+        </div>
+        <div class="pantallaNom">
+            <input class="caixaNom" id="caixaText" type="text" placeholder="Nombre">
+            <button class="botoJugar" onclick="carregarNom(), generaPregunta()">JUGAR</button>
+        </div>
+    </div>
+
+
+  <div id="hasPerdut" class="gameOver">
+
+        <img src="img/cruz.png" class="cruz">
+        <h2>Game<br>Over</h2>
+        <img src="img/star.png" class="Star"><div id="puntuacio"></div>
+        <button class="tornaJugar" onclick="tornaJugar()">Volver a jugar</button>
+       
+
+    </div>
+
+
+
+
+    <div id="hasGuanyat" class="youWin">
+
+        <img src="img/crown.png" class="corona">
+        <h2>You<br>Win</h2>
+        <img src="img/star.png" class="Star">10
+        <button class="tornaJugar" onclick="tornaJugar()">Volver a jugar</button>
+        
+
+    </div>
+
+    <div id="JOC" class="joc">
+
+
+        <div class="menu">
+            <div class="divPuntos">
+                <img class="puntos" src="img/star.png">
+                <span id="punts">0</span>
+            </div>
+            
+            <div class="nom" id="nomJugador">
+                <p></p>
+            </div>
+
+            <div class="divVidas" id="divVidas">
+
+            </div>
+        </div>
+
+
+    <div class="tot">
+        
+        <div class="GifLogoPreguntas">
+
+        </div>
+
+
+
+        <div class="contenidorPreguntes">
+            <div id="audio"> </div>
+            <div class="pregunta" id="preguntaJS">
+
+
+            </div>
+
+
+            <div id="pareRespostes" class="respostes">
+
+                <!-- Color taronja correcte #EC7807 -->
+                <!-- Color blau incorrecte #196075 -->
+
+                <button onclick="resposta1('1', 'resposta1')" id="resposta1" class="resposta1">
+
+                </button>
+
+
+                <button onclick="resposta1('2', 'resposta2')" id="resposta2" class="resposta2">
+
+                </button>
+
+
+                <button onclick="resposta1('3', 'resposta3')" id="resposta3" class="resposta3">
+
+                </button>
+
+
+                <button onclick="resposta1('4', 'resposta4')" id="resposta4" class="resposta4">
+
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  
+
+    <script src="soundit/preguntes.js"></script>
+    <script src="soundit/soundit.js"></script>
+
+</body>
+
+</html>
